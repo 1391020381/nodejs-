@@ -2,4 +2,4 @@
  |     字段名称    |        说明
  |-----------------|:-------:|     
  |Cache-Control    |      控制缓存的行为|
- |Pragma           |   http1.0  |s
+ |Pragma           |   http1.0  |
