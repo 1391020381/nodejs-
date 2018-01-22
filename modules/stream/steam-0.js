@@ -11,6 +11,14 @@ const server = http.createServer((res, res) => {
     res.end(data)
   })
 })
+// 2.
+
+var oppressor = require('oppressor');
+
+var server = http.createServer(function (req, res) {
+  var stream = fs.createReadStream(__dirname + '/data.txt');
+  stream.pipe(oppressor(req)).pipe(res);
+});
 
 server.listen('8000', () => {
   console.log('server is listening 8000')
