@@ -25,3 +25,13 @@ a.pipe(b).pipe(c).pipe(d)
 Readable流可以产出数据,你可以将这些数据传送到一个 writable,transform 或者 duplex 流中,只需要调用pipe()方法
 
 readableStream.pipe(dst)
+
+# writable流
+一个writable流指的是只能流进不能流出的流
+
+src.pipe(writableStream)
+
+# transform 流
+可以将 transform流想像成一个流的中间部分,它可以读也以写,但是并不保存数据,它只负责处理流经它的数据。
+# duplex流
+Duplex流是一个可读也可写的流
