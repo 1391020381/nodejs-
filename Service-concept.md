@@ -22,4 +22,17 @@
 
 # 在node中尽量使用异步操作，如果使用通过操作,又可能一个用户就可以堵塞主进程,就发挥不了node的调度的优势。<类似服务员和大厨的关系。node的住进程就是服务员负责调度,I/O就是大厨。>
 
+# 在github上创建项目是不要忘记,勾选 初始化项目时带有 README.md和.gitignore以及license
+# github上项目clone时可以选择使用  Use HTTPS还是 Use SSH <点击图标可以切换>
+
+# .gitignore
+1. 匹配模式前 / 代表项目根目录
+2. 匹配模式最后加 / 代表是目录
+3. 匹配模式前加 ! 代表取反
+4. * 代表任意字符
+5.  ?匹配任意一个字符
+6. ** 匹配多级目录
+
+ESLint
+
 [Fiddler抓包](http://www.cnblogs.com/yoyoketang/tag/fiddler/)
