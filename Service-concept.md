@@ -20,4 +20,6 @@
 2. 本地代码构建
 3. 实用工具开发
 
+# 在node中尽量使用异步操作，如果使用通过操作,又可能一个用户就可以堵塞主进程,就发挥不了node的调度的优势。<类似服务员和大厨的关系。node的住进程就是服务员负责调度,I/O就是大厨。>
+
 [Fiddler抓包](http://www.cnblogs.com/yoyoketang/tag/fiddler/)
