@@ -5,8 +5,8 @@ const buf1 = Buffer.allocUnsafe(26)
 const buf2 = Buffer.allocUnsafe(26).fill('!')
 
 for (let i = 0; i < 26; i++) {
-  // 97 是 a的十进制 ASCII值
-  buf1[i] = i + 97
+	// 97 是 a的十进制 ASCII值
+	buf1[i] = i + 97
 }
 buf1.copy(buf2, 8, 16, 20)
 

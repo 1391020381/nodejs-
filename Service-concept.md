@@ -33,7 +33,9 @@
 5.  ?匹配任意一个字符
 6. ** 匹配多级目录
 
-ESLint
+# [ESLint](http://eslint.cn/docs/user-guide/command-line-interface#init) 
+eslint --init
+
 
 [RisingStack](https://blog.risingstack.com/)
 [Fiddler抓包](http://www.cnblogs.com/yoyoketang/tag/fiddler/)

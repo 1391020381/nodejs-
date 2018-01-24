@@ -4,8 +4,13 @@
   "description": "nodejs-learing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
   },
+  "pre-commit": [
+    "lint",
+    "fix"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1391020381/nodejs-learning.git"
@@ -18,5 +23,10 @@
   "homepage": "https://github.com/1391020381/nodejs-learning#readme",
   "dependencies": {
     "chalk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.16.0",
+    "pre-commit": "^1.2.2"
   }
 }
