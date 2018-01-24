@@ -7,10 +7,7 @@
     "lint": "eslint .",
     "fix": "eslint --fix ."
   },
-  "pre-commit": [
-    "lint",
-    "fix"
-  ],
+  "pre-commit": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1391020381/nodejs-learning.git"
