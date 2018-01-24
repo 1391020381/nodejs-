@@ -33,3 +33,6 @@
  当我们在一个项目上做http缓存的应用时,我们还是会把上述提及的大多数首部字段均使用上,例如使用Expires来兼容旧的浏览器,使用Cache-Control来更精准地利用缓存,然后开启ETag跟Last-Modified功能进一步复用缓存减少流量。
  
  * http://i.gtimg.cn/vipstyle/vipportal/v4/img/common/logo.png?max_age=2592000
+ 
+ 
+ [browser http cache](https://juejin.im/post/5a673af06fb9a01c927ed880?utm_source=gold_browser_extension)
