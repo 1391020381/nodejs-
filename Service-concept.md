@@ -35,7 +35,9 @@
 
 # [ESLint](http://eslint.cn/docs/user-guide/command-line-interface#init) 
 eslint --init
-
-
+#Accept-Encoding
+* Accept-Encoding:gzip,deflate
+# Content-Encoding
+* Content-Encoding: gzip
 [RisingStack](https://blog.risingstack.com/)
 [Fiddler抓包](http://www.cnblogs.com/yoyoketang/tag/fiddler/)
