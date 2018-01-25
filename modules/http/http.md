@@ -15,4 +15,14 @@
     * method:只在server端的实例有(也就是serverReq.method)
     * statusCode/statusMessage:只在client端的实例有(也就是clientRes.statusCode,clientRes.statusMessage)
   
-
+# 关于继承与扩展
+ ## http.Server
+ * http.Server继承了net.Server
+ * net.createServer(fn),回调中的socket是个双工的stream接口,也就是说,读取发送方信息、向发送方发送信息都靠他。
+ ## http.ClientRequest
+  * http.ClientRequest内部创建了一个Socket来发起请求, http.request(options)内部是:
+    self.onSocket(net.createConnection(options))
+ ## http.ServerResponse
+   * 实现了 Writable Stream interface，内部也是通过socket来发送信息。
+ ## http.IncomingMessage
+   *实现了 Readable Stream interfac,req.socket --> 获得跟这次连接相关的socket
