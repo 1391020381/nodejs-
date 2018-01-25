@@ -26,3 +26,6 @@
    * 实现了 Writable Stream interface，内部也是通过socket来发送信息。
  ## http.IncomingMessage
    *实现了 Readable Stream interfac,req.socket --> 获得跟这次连接相关的socket
+   
+ # 超时处理
+  * response.setTimeout(msecs,callback)  
