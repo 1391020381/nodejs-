@@ -35,4 +35,8 @@
  * http://i.gtimg.cn/vipstyle/vipportal/v4/img/common/logo.png?max_age=2592000
  
  
+ 1. 询问缓存是否更新:根据 If-Modified-Since/ETag等协议向后端请求询问是否更新,没有更新返回304,浏览器使用本地缓。
+ 2. 直接使用本地缓存:根据协议里的Cache-Control/Expires字段去确定多长时间内不出请求询问更新,直接使用本地缓存。
+ 
+ 
  [browser http cache](https://juejin.im/post/5a673af06fb9a01c927ed880?utm_source=gold_browser_extension)
