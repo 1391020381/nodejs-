@@ -29,3 +29,8 @@
    
  # 超时处理
   * response.setTimeout(msecs,callback)  
+  
+ # http 获取参数
+ 1.  req.body
+ 2.  req.query
+ 3.  req.params <req.params  另一种方法传参数给服务器,但是这不算是传统标准的做法,是属于 HTTP Routing的延伸应用。req.params：解析URL中占位符,如/:name,访问/haha ,req.params的值为{name:'haha'}> 
