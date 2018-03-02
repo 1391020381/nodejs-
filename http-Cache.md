@@ -3,7 +3,7 @@
  ## 通用首部字段(就是请求报文和响应报文都能用上的字段)
  |     字段名称    |        说明
  |-----------------|:-------:|     
- |Cache-Control    |      控制缓存的行为|
+ |Cache-Control    |      控制缓存的行为 no-cache<不直接使用缓存,要向服务器发起(新鲜度校验)请求>、max-age=delta-seconds告知客户端该资源在 delta-seconds秒内是新鲜的,无需向服务器发请求|
  |Pragma           |   http1.0的旧社会遗留物,值为'no-cache'时禁用缓存  |
  
  ## 请求首部
@@ -23,6 +23,13 @@
  |Expires| http1.0的遗留物,实体主体过期的时间|
  | Last-Modified|资源的最后一次修改的时间|
  
+ # 缓存校验字段
+ * Pragma和 Cache-Control均能让客户端决定是否向服务器发送请求,缓存时间为过期,那么直接使用本地缓存。
+ 但向服务器发送了请求,不一定要读取回该资源的整个实体内容,如果服务器并没有更新过这个资源,直接告诉浏览器直接用缓存(304)。
+    1. Last-Modified
+       *  If-Modified-Since: Last-Modified-value
+       * 
+    2. ETag<服务器会通过某种算法，给资源计算得出一个唯一标志符（比如md5标志），在把资源响应给客户端的时候，会在实体首部加上“ETag: 唯一标识符”一起返回给客户端。>
  * Pragma字段的优先级会比Expires(相对服务器的时间)更高。
  * 有了Pragma来禁用缓存,自然也需要有个东西来启用缓存和定义缓存时间,对http1.0而言,Expires就是做这件事的首部字段。Expires的值对应一个GMT（格林尼治时间），比如“Mon, 22 Jul 2002 11:12:01 GMT”来告诉浏览器资源缓存过期时间，如果还没过该时间点则不发请求。
  * Cache-Control是一个通用的首部字段,在请求和响应中使用。"Cache-Control" ":" cache-directive" ,cache-directive有很多不同的取值。  
